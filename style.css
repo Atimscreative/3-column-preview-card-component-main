@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+:root {
+  --bright-orange: #e38826;
+  --dark-cyan: #006970;
+  --very-dark-cyan: #004241;
+  --text-color: #ffffffbf;
+  --body: #f2f2f2;
+  --font-1: "Lexend Deca", sans-serif;
+  --font-2: "Big Shoulders Display", cursive;
+  --weight-1: 400;
+  --weight-2: 700;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background: var(--body);
+  color: var(--text-color);
+  font-family: var(--font-1);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1140px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 20%;
+  padding: 50px;
+}
+
+.one {
+  background: var(--bright-orange);
+}
+
+.two {
+  background: var(--dark-cyan);
+}
+
+.three {
+  background: var(--very-dark-cyan);
+}
+
+.icon {
+  margin-bottom: 40px;
+}
+
+.card h1 {
+  text-transform: uppercase;
+  font-family: var(--font-2);
+  margin-bottom: 25px;
+  color: var(--body);
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 70px;
+}
+
+.btn {
+  padding: 10px 26px;
+  border-radius: 50px;
+  background-color: var(--body);
+  transition: 0.4s;
+}
+
+.one .btn-text {
+  color: var(--bright-orange);
+}
+
+.two .btn-text {
+  color: var(--dark-cyan);
+}
+
+.three .btn-text {
+  color: var(--very-dark-cyan);
+}
+
+.btn:hover {
+  background: transparent;
+  border: 2px solid var(--body);
+}
+
+.btn:hover .btn-text {
+  color: var(--body) !important;
+}
+
+.attribution {
+  width: 80%;
+  margin: 50px auto 0;
+  color: var(--very-dark-cyan);
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--bright-orange);
+}
+
+/* - Mobile: 375px */
+@media screen and (min-width: 320px) {
+  .cards {
+    flex-direction: column;
+    margin: 100px 30px;
+  }
+
+  .card {
+    width: 80%;
+    height: auto;
+  }
+
+  .card:nth-child(1) {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card:nth-child(3) {
+    border-radius: 0 0 10px 10px;
+  }
+}
+/* - Desktop: 1440px */
+@media screen and (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    margin: 100px auto;
+  }
+
+  .card {
+    height: 400px;
+  }
+
+  .card:nth-child(1) {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .card:nth-child(3) {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .card p {
+    margin-bottom: 30px;
+  }
+
+  .attribution {
+    width: 100%;
+  }
+}
