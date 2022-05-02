@@ -61,7 +61,7 @@ body {
 }
 
 .icon {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .card h1 {
@@ -144,6 +144,7 @@ body {
   }
 
   .card {
+    width: 200px;
     height: 400px;
   }
 
